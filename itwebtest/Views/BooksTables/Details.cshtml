@@ -1,0 +1,66 @@
+﻿@model itwebtest.Models.BooksTable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BooksTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Auteur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Auteur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Editeur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Editeur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NBexmplr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NBexmplr)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<itwebtest.Models.BooksTable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>User Panel</h2>
+
+<label>Search By Title</label>
+    </br>
+<form method="get" asp-action="Index">
+    <input type="text" name="searchText" value="@ViewData["GetBooks"]" class="form-control"></br>
+    <input type="submit" value="Search"></br></br>
+</form>
+</br>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Auteur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Editeur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NBexmplr)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Auteur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Editeur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NBexmplr)
+            </td>
+        </tr>
+    }
+
+</table>
